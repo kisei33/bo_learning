@@ -13,11 +13,19 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
   <!-- Material Design Bootstrap -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.11/css/mdb.min.css" rel="stylesheet">
+  <style>
+    .container-custom {
+      height: 330px; /* 幅をカスタマイズ */
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+    }
+  </style>
 </head>
 
 <body>
 
-  <div class="container">
+  <div class="container container-custom">
   @foreach($courses as $course)
     <div class="card mt-3">
       <div class="card-body d-flex flex-row">
