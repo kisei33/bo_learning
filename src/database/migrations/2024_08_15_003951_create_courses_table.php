@@ -11,7 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('bo_courses', function (Blueprint $table) {
+        Schema::create('courses', function (Blueprint $table) {
             $table->id(); // 'id' column with auto-increment
             $table->string('title', 200)->default('');
             $table->text('introduction')->nullable();
@@ -32,6 +32,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('bo_courses');
+        Schema::dropIfExists('courses');
     }
 };
