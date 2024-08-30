@@ -37,8 +37,8 @@ class CourseSeeder extends Seeder
                 'user_id' => 1,
             ],
             [
-                'title' => 'Laravel入門',
-                'introduction' => 'Laravelの基礎を学ぶためのコースです。',
+                'title' => 'Raila入門',
+                'introduction' => 'Railsの基礎を学ぶためのコースです。',
                 'opened' => now(),
                 'created' => now(),
                 'modified' => now(),
@@ -48,8 +48,8 @@ class CourseSeeder extends Seeder
                 'user_id' => 1,
             ],
             [
-                'title' => 'Laravel入門',
-                'introduction' => 'Laravelの基礎を学ぶためのコースです。',
+                'title' => 'Python入門',
+                'introduction' => 'Pythonの基礎を学ぶためのコースです。',
                 'opened' => now(),
                 'created' => now(),
                 'modified' => now(),
@@ -59,8 +59,8 @@ class CourseSeeder extends Seeder
                 'user_id' => 1,
             ],  
             [
-                'title' => 'Laravel入門',
-                'introduction' => 'Laravelの基礎を学ぶためのコースです。',
+                'title' => 'Java入門',
+                'introduction' => 'Javaの基礎を学ぶためのコースです。',
                 'opened' => now(),
                 'created' => now(),
                 'modified' => now(),
