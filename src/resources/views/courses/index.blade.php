@@ -6,7 +6,7 @@
   <div class="container container-custom">
   @foreach($courses as $course)
     <div class="card mt-3">
-      <a href="{{ route('admin.courses.create') }}">
+      <a href="{{ route('courses.show', ['id'=>$course->id]) }}">
       <div class="card-body d-flex flex-row">
         <i class="fas fa-user-circle fa-3x mr-1"></i>
         <div>
