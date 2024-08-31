@@ -24,5 +24,19 @@ class CourseController extends Controller
         $course = Course::find($id);
 
         return view('courses.show', ['course' => $course]);
-    }   
+    }
+
+    public function store(Request $request)
+    {
+      // 新しい Item を作成
+      $course = new Course;
+      // フォームから送られてきたデータをそれぞれ代入
+      $course->user_id = $request->user_id;
+      $course->title = $request->title;
+      $course->introduction = $request->introduction;
+      // データベースに保存
+      $course->save();
+      // indexページへ遷移
+      return redirect('/courses');
+    }
 }
