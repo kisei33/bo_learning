@@ -33,4 +33,8 @@
     display: flex;
     flex-wrap: wrap;
   }
+
+  .container-custom > .card {
+    flex-basis: calc(31.333%); /* 3列表示・枠を均等にする */
+}
 </style>
