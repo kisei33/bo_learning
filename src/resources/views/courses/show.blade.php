@@ -15,7 +15,7 @@
     <div class="card-body pt-0">
       @foreach ($contents as $content)
         <h3 class="h4 card-title">
-          <a href="{{ route('contents.index', $course->id) }}">
+          <a href="{{ route('contents.show', ['id' => $content->id]) }}">
           {{ $content->title }}
         </h3>
       @endforeach
