@@ -18,7 +18,8 @@
               </div>
               <div class="form-group">
                 <label></label>
-                <textarea name="body" required class="form-control" rows="16" placeholder="本文">{{ old('body') }}</textarea>
+                <!-- <textarea name="body" required class="form-control" rows="16" placeholder="本文">{{ old('body') }}</textarea> -->
+                <textarea class="form-control" name="body" id="summernote" cols="30" rows="10">{{ old('body') }}</textarea>
               </div>
               <button type="submit" class="btn blue-gradient btn-block">投稿する</button>
               </form>
@@ -28,4 +29,21 @@
       </div>
     </div>
   </div>
+  <script>
+    $('#summernote').summernote({
+      placeholder: 'Hello Bootstrap 4',
+      tabsize: 2,
+      height: 100,
+      toolbar: [
+        ['style', ['style', 'fontsize', 'fontsizeunit']],
+        ['font', ['bold', 'italic', 'strikethrough', 'underline', 'height', 'superscript', 'subscript', 'clear', 'hr']],
+        ['fontname', ['fontname']],
+        ['color', ['color', 'forecolor', 'backcolor']],
+        ['para', ['ul', 'ol', 'paragraph']],
+        ['table', ['table']],
+        ['insert', ['link', 'picture', 'video']],
+        ['view', ['undo', 'redo', 'fullscreen', 'codeview', 'help']]
+      ]
+    });
+  </script>
 @endsection

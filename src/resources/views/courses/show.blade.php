@@ -3,22 +3,47 @@
 @section('title', '記事詳細')
 
 @section('content')
-  <div class="container">
-    <div class="card-body pt-0">
-        <h3 class="h4 card-title">
-            {{ $course->title }}
-        </h3>
-        <div class="card-text">
-        {{ $course->introduction }}
-        </div>
+  <div>
+    <div class="card-body pt-0 course-container">
+        <section>
+          <h3 class="card-title">
+              {{ $course->title }}
+          </h3>
+        </section>
+        <section>
+          <h3 class="card-text">
+            {{ $course->introduction }}
+          </h3>
+        </section>
     </div>
+  </div>
+  <div class="container">
+    <h3 class="curriculum">カリキュラム</h3>
     <div class="card-body pt-0">
       @foreach ($contents as $content)
-        <h3 class="h4 card-title">
+        <h3 class="h4 card-title section">
           <a href="{{ route('contents.show', ['id' => $content->id]) }}">
           {{ $content->title }}
         </h3>
       @endforeach
     </div>
   </div>
+  <style>
+    .course-container {
+      color: white;
+      background-color :orange;
+      height: 300px;
+    }
+    .curriculum {
+      margin-top: 20px;
+      margin-bottom: 37px;
+      border-left: 5px solid #1e5099;
+    }
+    .section {
+      height: 60px;
+      display: flex;
+      align-items: center;
+      border-top: 1px solid hsla(0, 0%, 43.9%, .53333);
+    }
+  </style>
 @endsection
