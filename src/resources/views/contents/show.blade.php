@@ -3,7 +3,7 @@
 @section('title', 'コンテンツ詳細')
 
 @section('content')
-  <div class="container">
+  <div class="main">
     <div class="card-body pt-0">
         <h3 class="h4 card-title">
             {{ $content->title }}
@@ -45,6 +45,11 @@
 
       /* スマホ用の慣性スクロール */
       /* -webkit-overflow-scrolling: touch; */
+    }
+
+    .main {
+      width: 85%;
+      margin-left: 200px;
     }
 
     .list {
