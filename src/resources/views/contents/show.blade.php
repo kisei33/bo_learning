@@ -54,6 +54,7 @@
 
     .list {
       margin-bottom:20px;
+      list-style:none;
     }
   </style>
 @endsection
