@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Course;
 use App\Models\Content;
+use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 
 class ContentController extends Controller
@@ -15,6 +16,12 @@ class ContentController extends Controller
 	public function show($id)
     {
         $content = Content::find($id);
+
+        $content->body = Str::replace(
+            '<pre>',
+            '<div class="tab">Code</div><pre>',
+            $content->body
+        );
 
         return view('contents.show', ['content' => $content]);
     }
