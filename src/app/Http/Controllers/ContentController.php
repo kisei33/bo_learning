@@ -4,11 +4,20 @@ namespace App\Http\Controllers;
 
 use App\Models\Course;
 use App\Models\Content;
+use App\Services\HtmlProcessorService;
 use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 
 class ContentController extends Controller
 {
+
+    protected $htmlProcessor;
+
+    public function __construct(HtmlProcessorService $htmlProcessor)
+    {
+        $this->htmlProcessor = $htmlProcessor;
+    }
+
 	/**
 	 * 選択したコースとコンテンツ一覧を表示
 	 * @param int $content_id コンテンツID
@@ -17,11 +26,8 @@ class ContentController extends Controller
     {
         $content = Content::find($id);
 
-        $content->body = Str::replace(
-            '<pre>',
-            '<div class="tab">Code</div><pre>',
-            $content->body
-        );
+        // リッチテキスト内のHTMLを加工
+        $content->body = $this->htmlProcessor->addTabToPreTags($content->body);
 
         return view('contents.show', ['content' => $content]);
     }
