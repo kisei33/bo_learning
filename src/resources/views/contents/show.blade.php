@@ -23,8 +23,25 @@
   </nav>
   <style>
     pre {
-      background-color: #f4f4f4;
+      /* background-color: #f4f4f4; */
+      border: 1px solid #aaa;
+      border-radius: 0 .2rem .2rem .2rem;
+      padding: .4rem;
+      margin-bottom: 1rem;
+      font-family: Consolas, "Meiryo UI";
       padding: 10px;
+      width: 50%;
+    }
+    .tab {
+      width: 3.5rem;
+      color: #666;
+      background-color: #e8e8e8;
+      border-top: 1px solid #aaa;
+      border-right: 1px solid #aaa;
+      border-left: 1px solid #aaa;
+      border-radius: .3rem .3rem 0 0;
+      text-align: center;
+      font-size: 8pt;
     }
     .menu {
       position: fixed;
