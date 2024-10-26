@@ -73,5 +73,16 @@
       margin-bottom:20px;
       list-style:none;
     }
+
+    h1 {
+      padding: 0.5em 0;/*上下の余白*/
+      border-top: solid 3px #ffaf58;/*上線*/
+      border-bottom: solid 3px #ffaf58;/*下線*/
+    }
+
+    h2 {
+      padding: 0.2em;
+      border-bottom: solid 1.5px #e0e0e0;
+    }
   </style>
 @endsection
