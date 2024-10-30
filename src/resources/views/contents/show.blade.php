@@ -11,11 +11,10 @@
     </div>
   </div>
   <nav class="menu">
-    <ul>
-      <li class="list">Item 1 iiiiiiiiiiiii<li class="list">Item 2 <li class="list">Item 3 <li class="list">Item 4 <li class="list">Item 5
-      <li class="list">Item 6 <li class="list">Item 7 <li class="list">Item 8 <li class="list">Item 9 <li class="list">Item 10
-      <li class="list">Item 1 <li class="list">Item 2 <li class="list">Item 3 <li class="list">Item 4 <li class="list">Item 5
-      <li class="list">Item 6 <li class="list">Item 7 <li class="list">Item 8 <li class="list">Item 9 <li class="list">Item 10
+    <ul class="contents-list">
+      @foreach ($contents as $content)
+      <li class="list">{{ $content->title }}
+      @endforeach
     </ul>
   </nav>
   <style>
@@ -59,6 +58,10 @@
 
       /* スマホ用の慣性スクロール */
       /* -webkit-overflow-scrolling: touch; */
+    }
+
+    .contents-list {
+      margin-top: 20px;
     }
 
     .main {

@@ -44,6 +44,8 @@
       display: flex;
       align-items: center;
       border-top: 1px solid hsla(0, 0%, 43.9%, .53333);
+      font-size: 20px;
+      font-weight: 700;
     }
   </style>
 @endsection

@@ -25,11 +25,12 @@ class ContentController extends Controller
 	public function show($id)
     {
         $content = Content::find($id);
+        $contents = Content::where('course_id', $content->course_id)->get();
 
         // リッチテキスト内のHTMLを加工
         $content->body = $this->htmlProcessor->addTabToPreTags($content->body);
 
-        return view('contents.show', ['content' => $content]);
+        return view('contents.show', ['content' => $content, 'contents' => $contents]);
     }
 
 	public function create()
