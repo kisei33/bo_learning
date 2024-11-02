@@ -15,7 +15,7 @@
   </div>
   <nav class="menu">
     <ul>
-      <li class="list">Item 1 iiiiiiaaaaaauuuuueeee<li class="list">Item 2 <li class="list">Item 3 <li class="list">Item 4 <li class="list">Item 5
+      <li class="list">Item 1 iiiiii<li class="list">Item 2 <li class="list">Item 3 <li class="list">Item 4 <li class="list">Item 5
       <li class="list">Item 6 <li class="list">Item 7 <li class="list">Item 8 <li class="list">Item 9 <li class="list">Item 10
       <li class="list">Item 1 <li class="list">Item 2 <li class="list">Item 3 <li class="list">Item 4 <li class="list">Item 5
       <li class="list">Item 6 <li class="list">Item 7 <li class="list">Item 8 <li class="list">Item 9 <li class="list">Item 10
