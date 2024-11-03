@@ -5,26 +5,39 @@
 @section('content')
   <div class="main">
     <div class="card-body pt-0">
-        <h3 class="h4 card-title">
-            {{ $content->title }}
-        </h3>
         <div class="card-text">
             {!!$content->body!!}
         </div>
     </div>
   </div>
   <nav class="menu">
-    <ul>
-      <li class="list">Item 1 iiiiii<li class="list">Item 2 <li class="list">Item 3 <li class="list">Item 4 <li class="list">Item 5
-      <li class="list">Item 6 <li class="list">Item 7 <li class="list">Item 8 <li class="list">Item 9 <li class="list">Item 10
-      <li class="list">Item 1 <li class="list">Item 2 <li class="list">Item 3 <li class="list">Item 4 <li class="list">Item 5
-      <li class="list">Item 6 <li class="list">Item 7 <li class="list">Item 8 <li class="list">Item 9 <li class="list">Item 10
+    <ul class="contents-list">
+      @foreach ($contents as $content)
+      <li class="list">{{ $content->title }}
+      @endforeach
     </ul>
   </nav>
   <style>
     pre {
-      background-color: #f4f4f4;
+      /* background-color: #f4f4f4; */
+      border: 1px solid #aaa;
+      border-radius: 0 .2rem .2rem .2rem;
+      padding: .4rem;
+      margin-bottom: 1rem;
+      font-family: Consolas, "Meiryo UI";
       padding: 10px;
+      width: 50%;
+    }
+    .tab {
+      width: 3.5rem;
+      color: #666;
+      background-color: #e8e8e8;
+      border-top: 1px solid #aaa;
+      border-right: 1px solid #aaa;
+      border-left: 1px solid #aaa;
+      border-radius: .3rem .3rem 0 0;
+      text-align: center;
+      font-size: 8pt;
     }
     .menu {
       position: fixed;
@@ -47,14 +60,29 @@
       /* -webkit-overflow-scrolling: touch; */
     }
 
+    .contents-list {
+      margin-top: 20px;
+    }
+
     .main {
       width: 85%;
-      margin-left: 200px;
+      margin: 85px 70px 150px 270px;
     }
 
     .list {
       margin-bottom:20px;
       list-style:none;
+    }
+
+    h1 {
+      padding: 0.5em 0;/*上下の余白*/
+      border-top: solid 3px #ffaf58;/*上線*/
+      border-bottom: solid 3px #ffaf58;/*下線*/
+    }
+
+    h2 {
+      padding: 0.2em;
+      border-bottom: solid 1.5px #e0e0e0;
     }
   </style>
 @endsection
