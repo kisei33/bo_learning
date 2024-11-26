@@ -6,9 +6,6 @@
   <div>
     <div class="card-body pt-0 course-container">
         <section>
-          <h3 class="card-title">
-              {{ $course->title }}
-          </h3>
         </section>
         <section>
           <h3 class="card-text">
